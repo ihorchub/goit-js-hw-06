@@ -33,8 +33,7 @@ function numberOfSymbols() {
   } else if (textInput.classList.contains('valid')) {
     textInput.classList.remove('valid');
   }
-
-  if (textInput.value.trim().length == textInput.dataset.length) {
+  if (textInput.value.trim().length === Number(textInput.dataset.length)) {
     textInput.classList.add('valid');
   } else {
     textInput.classList.add('invalid');

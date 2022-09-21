@@ -24,12 +24,14 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 function createIngredientsList(elements) {
   const listIngredients = document.querySelector('#ingredients');
+  const arrOfItems = [];
   elements.map(element => {
     const items = document.createElement('li');
     items.classList.add('item');
     items.textContent = element;
-    listIngredients.append(items);
+    arrOfItems.push(items);
   });
+  listIngredients.append(...arrOfItems);
 }
 
 createIngredientsList(ingredients);
